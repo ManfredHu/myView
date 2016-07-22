@@ -99,7 +99,7 @@ define('page1', function(require, exports, module) {
 
 
 |参数|描述|示例|默认值|
-|---|---|---|
+|---|---|---|---|
 |index|当hash不存在的时候，默认请求的module和action,数组的第一项是module,第二项是action|["module","action"]|无|
 |containerId|主容器id，myView填充html要用到的domId|"container"|body|
 |extender|view方法扩展器，可以作为项目的基类，可不填|"extender"|""|
