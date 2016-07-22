@@ -93,6 +93,37 @@ myView框架是一套方便的由路由控制页面加载的框架。
 
   ```
 
+## 配置
+
+在初始化myView前，请使用全局变量```var _mytouchConfig={}```来配置myView
+
+参数|描述|示例|默认值
+---|---|---
+index|当hash不存在的时候，默认请求的module和action,数组的第一项是module,第二项是action|["module","action"]|无
+containerId|主容器id，myView填充html要用到的domId|"container"|body
+extender|view方法扩展器，可以作为项目的基类，可不填|"extender"|""
+moduleActionMap|action路由映射，可以给某些action设置别名| 参见上面的入口文件|{}
+modelRouteMap|module路由映射，可以给某些module设置别名|参加上面的入口文件示例|{}
+
+## API
+
+### view.setContent(htmlString)
+
+给当前页面填充html
+
+
+### view.setTimeout(fn,timeouts)
+
+view封装的安全setTimeout方法
+
+### view.setInterval(fn,timeouts)
+
+view封装的安全setInterval方法
+
+### view.callbackProxy(fn,[thisArg])
+
+view封装的安全回调方法，把你的回调函数用callbackProxy包装一下，以便于执行安全的回调函数
+
   ## Example
 
   参见:https://github.com/TC-FE/myView/tree/master/example/
